@@ -3,12 +3,23 @@
 require_once __DIR__ . '/inc/db-connect.php';
 require_once __DIR__ . '/inc/functions.php';
 
-$perPage = 2;
-$currentPage = 1;
+$perPage = 3;
+/*$currentPage = 1;
 if(isset($_GET['page'])):
     $currentPage = @(int) $_GET['page']; // mit klammer und datentyp überschreibe ich den Datentyp
     if($currentPage <= 0): $currentPage = 1; endif;
-endif;
+endif;*/
+
+
+/*  Code kompakter geschrieben */
+// Klammer wichtig damit ?? zuerst ausgeführt wird
+// ascendo-schreibweise für if-verzweigung (ISt GET gesetzt? JA? --> übernehmen, Nein? --> als 1 einsetzen
+ // Warnungen ignorieren und Ausgabe in INT umwandeln
+$currentPage = @(int) ($_GET['page'] ?? 1);
+if ($currentPage <= 0) {
+    $currentPage = 1;
+}
+
 
 //zum testen
 //var_dump($currentPage);

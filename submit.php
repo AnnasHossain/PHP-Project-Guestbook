@@ -6,7 +6,7 @@ require __DIR__ . '/inc/functions.php';
 // Sicherheit falls ein Angreifer seine Eingaben entfernt übers Quellcode
 if (!empty($_POST)) {
 
-    $title = '';
+    /*$title = '';
     if (isset($_POST['title'])) {
         $title = @(string) $_POST['title'];  // Überschreibung des Arrays in einem String
     } // @-Zeichen unterdrückt Warnungen hier ist ok da es Bei array to String Konvertierungen Warnungen ignoriert werden können
@@ -20,7 +20,11 @@ if (!empty($_POST)) {
     $content = '';
     if (isset($_POST['content'])) {
         $content = @(string) $_POST['content'];
-    }
+    }*/
+    // HIER KOMPAKTER GEMACHT
+    $title = @(String) ($_POST['title'] ?? '');
+    $name = @(String) ($_POST['name'] ?? '');
+    $content = @(String) ($_POST['content'] ?? '');
 
     if (!empty($title) && !empty($name) && !empty($content)) { // und wenn Eingaben vorhanden sind dann soll in DB
         $stmt = $pdo->prepare('INSERT INTO entries (`name`, `title`, `content`) VALUES (:name, :title, :content)');
@@ -29,7 +33,9 @@ if (!empty($_POST)) {
         $stmt->bindValue('content', $content);
         $stmt->execute();
 
-        echo '<a href="index.php">Zurück zum Gästebuch...</a>';
+        // Success ist  da für Feedback beim Abschicken des Formulares line 15-17 bei index.view.php
+        header('Location: /index.php?success=1'); // Man soll wieder zur Hauptseite automatisch wieder zurück schicken
+        //echo '<a href="index.php">Zurück zum Gästebuch...</a>';
         die();
     }
 }
