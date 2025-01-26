@@ -22,19 +22,17 @@ Dies ist ein einfaches Webprojekt, das ich nach der Absolvierung eines PHP-Kurse
    - Öffne phpMyAdmin über XAMPP.
    - Erstelle eine neue MySQL-Datenbank.
    - Importiere die enthaltene `database.sql`-Datei (falls vorhanden).
-3. **Konfiguration:**
-   - Die `config.php`-Datei anpassen (z. B. Datenbank-Zugangsdaten).
 4. **Projekt starten:**
    - Speichere die Projektdateien im `htdocs`-Verzeichnis von XAMPP.
    - Rufe das Projekt über `http://localhost/dein-projektordner` auf.
 
-## Nutzung
+## Nutzung 
 - Die Webseite aufrufen und einen Eintrag mit Namen und Titel verfassen.
 - Der Eintrag wird gespeichert und unterhalb angezeigt.
 - Bei vielen Einträgen wird eine Seitennavigation generiert.
 
 ## Screenshots
-*(Hier können Screenshots der Webseite eingefügt werden.)*
+![Bild 26 01 25 um 17 35](https://github.com/user-attachments/assets/98281383-f552-479c-ba04-ed3711cb2d4a)
 
 ## Erweiterungsmöglichkeiten
 - **Login-System** für authentifizierte Benutzer.
