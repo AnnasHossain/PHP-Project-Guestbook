@@ -54,7 +54,7 @@
 
 <!--    <pre><?php /*print_r($entries); */?></pre>
 -->
-    <?php foreach($entries AS $entry): ?>
+    <?php foreach($entries AS $entry): //$entries kommt von index.php aus Zeile 41?>
         <?php
         $paragraphs = explode("\n", $entry['content']);
         $filteredParagraphs = [];
@@ -108,28 +108,29 @@
     <?php endif; ?>
 
     <hr class="guestbook-separator" />
-
-    <footer class="guestbook-footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Über Uns</h3>
-                <p>Dieses Gästebuch wurde im Rahmen eines PHP-Kurses entwickelt. Es dient als Übungsprojekt für Webentwicklung.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Kontakt</h3>
-                <p>Email: support@example.com</p>
-                <p>Telefon: +49 123 456 789</p>
-            </div>
-            <div class="footer-section">
-                <h3>Rechtliches</h3>
-                <p>Impressum | Datenschutz</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 Gästebuch-Projekt. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
-
 </div>
+
+
+<footer class="guestbook-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Über Uns</h3>
+            <p>Dieses Gästebuch wurde im Rahmen eines PHP-Kurses entwickelt. Es dient als Übungsprojekt für Webentwicklung.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Kontakt</h3>
+            <p>Email: support@example.com</p>
+            <p>Telefon: +49 123 456 789</p>
+        </div>
+        <div class="footer-section">
+            <h3>Rechtliches</h3>
+            <p>Impressum | Datenschutz</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Gästebuch-Projekt. Alle Rechte vorbehalten.</p>
+    </div>
+</footer>
+
 </body>
 </html>
