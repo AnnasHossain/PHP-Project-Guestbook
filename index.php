@@ -32,12 +32,12 @@ $countTotal = $stmtCount->fetch(PDO::FETCH_ASSOC)['count'];
 
 
 $stmt = $pdo->prepare('SELECT * FROM `entries` ORDER BY `id` DESC LIMIT :offset, :perPage' ); //Platzhalter am Ende setzten für Schutz
+$stmt->bindValue(':perPage', $perPage, PDO::PARAM_INT);
 $stmt->bindValue(':offset', ($currentPage-1)*$perPage, PDO::PARAM_INT  );
 // wenn wir auf Seite 1 sind --> offSet auf 0
 // wenn auf Seite 2 dann --> offset sollte $perPage  sein
 // wenn auf Seite 3 dann --> offset sollte $perPage *2 sein also 4
-$stmt->bindValue(':perPage', $perPage, PDO::PARAM_INT);
 $stmt->execute();
 $entries = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+//echo "i work here "; // working soo good, wants to crashing my mac
 require __DIR__ . '/views/index.view.php';

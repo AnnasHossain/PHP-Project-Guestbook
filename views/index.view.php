@@ -122,7 +122,7 @@
             </div>
             <div class="footer-section">
                 <h3>Rechtliches</h3>
-                <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+                <p>Impressum | Datenschutz</p>
             </div>
         </div>
         <div class="footer-bottom">

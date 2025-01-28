@@ -158,6 +158,7 @@ body{
 }
 
 .guestbook-footer {
+    flex: unset;  /* flexbox zurücksetzen */
     background-color: #f3e8dc;
     color: #5C3A1E;
     padding: 30px 0;

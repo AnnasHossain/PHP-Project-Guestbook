@@ -33,9 +33,10 @@ if (!empty($_POST)) {
         $stmt->bindValue('content', $content);
         $stmt->execute();
 
-        // Success ist  da für Feedback beim Abschicken des Formulares line 15-17 bei index.view.php
-        header('Location: /index.php?success=1'); // Man soll wieder zur Hauptseite automatisch wieder zurück schicken
-        //echo '<a href="index.php">Zurück zum Gästebuch...</a>';
+        // Success ist  da für Feedback/Pop-Up beim Abschicken des Formulares line 15-17 bei index.view.php
+        header('Location: index.php?success=1'); // Man soll wieder zur index automatisch wieder zurückgeleitet werden
+//        echo '<a href="index.php">Zurück zum Gästebuch...</a>';
+//        echo "i work here";
         die();
     }
 }
