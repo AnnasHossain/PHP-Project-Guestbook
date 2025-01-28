@@ -39,10 +39,8 @@ Dies ist ein einfaches Webprojekt, das ich nach der Absolvierung eines PHP-Kurse
 - **Einträge bearbeiten oder löschen**.
 - **Erweiterte Sicherheitsmechanismen** wie Prepared Statements oder CSRF-Schutz.
 
-## Lizenz
-Dieses Projekt steht unter der **MIT-Lizenz**. 
 
-Die MIT-Lizenz erlaubt es, den Code frei zu nutzen, zu modifizieren und zu verbreiten, solange der ursprüngliche Copyright-Hinweis erhalten bleibt. Weitere Informationen: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
+
 
 ---
 [ENGLISH VERSION]
@@ -88,9 +86,4 @@ This is a simple web project that I developed independently after completing a P
 - **Login system** for authenticated users.
 - **Edit or delete entries**.
 - **Enhanced security measures** like prepared statements or CSRF protection.
-
-## License
-This project is licensed under the **MIT License**. 
-
-The MIT License allows free use, modification, and distribution of the code as long as the original copyright notice is retained. More information: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
 
